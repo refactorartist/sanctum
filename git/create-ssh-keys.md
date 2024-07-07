@@ -34,12 +34,13 @@
     
     - Ensure ssh-agent is running: `eval "$(ssh-agent -s)"`
     - If you are using macOS Sierra 10.12.2 or later, update your `~/.ssh/config` file to automatically load keys and store passphrases in your keychain:
-        
-        bash
-        
-        Copy code
-        
-        `Host *   AddKeysToAgent yes   UseKeychain yes   IdentityFile ~/.ssh/id_ed25519`
+      
+```
+Host *   
+  AddKeysToAgent yes   
+  UseKeychain yes   
+  IdentityFile ~/.ssh/id_ed25519
+```
         
     - Add your SSH key to the ssh-agent: `ssh-add -K ~/.ssh/id_ed25519`
       
